@@ -1,5 +1,7 @@
 * { box-sizing: border-box; }
 :root {
+  /* Inline errors change the form height. Keep browser anchoring from competing with field focus. */
+  overflow-anchor: none;
   font-family: Arial, Helvetica, sans-serif;
   color: #475569;
   background: #f4f7fb;
