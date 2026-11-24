@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; form-action 'none'; object-src 'none'; base-uri 'none'">
+  <title>Registration | RP Workspace</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="brand">
+    <img src="assets/logo.svg" width="270" height="52" alt="RP Workspace">
+  </header>
+  <main class="workspace">
+    <aside class="intro" aria-label="About the workspace">
+      <h2>Your workspace,<br> with a clearer start.</h2>
+      <p>Organize your access details in one simple, focused interface.</p>
+      <img src="assets/access_illustration.svg" width="480" height="330" alt="">
+    </aside>
+    <section class="card" aria-labelledby="form-title">
+      <h1 id="form-title">Create your account.</h1>
+      <p class="subtitle">Start with a few essential details.</p>
+      <form id="registration" method="post" aria-labelledby="form-title" novalidate>
+        <noscript><p>Enable JavaScript to check this form in your browser.</p></noscript>
+        <fieldset disabled>
+          <legend class="sr-only">Account details. All fields are required.</legend>
+          <div class="field">
+            <label for="full-name">Full name <span aria-hidden="true">*</span></label>
+            <input id="full-name" type="text" autocomplete="name" placeholder="Your full name" required aria-describedby="full-name-error">
+            <p class="error" id="full-name-error"></p>
+          </div>
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input id="email" type="email" autocomplete="username" placeholder="you@company.com" required aria-describedby="email-error">
+            <p class="error" id="email-error"></p>
+          </div>
+          <div class="field">
+            <label for="password">Password <span aria-hidden="true">*</span></label>
+            <input id="password" type="password" autocomplete="new-password" placeholder="Create a password" required aria-describedby="password-hint password-error">
+            <p id="password-hint" class="hint">Use 15–128 characters. Spaces are allowed.</p>
+            <p class="error" id="password-error"></p>
+          </div>
+          <div class="field">
+            <label for="confirmation">Confirm password <span aria-hidden="true">*</span></label>
+            <input id="confirmation" type="password" autocomplete="new-password" placeholder="Repeat your password" required aria-describedby="confirmation-error">
+            <p class="error" id="confirmation-error"></p>
+          </div>
+          <div class="field">
+            <label class="consent" for="privacy">
+              <input id="privacy" type="checkbox" required aria-describedby="privacy-error">
+              <span>I have read the privacy note. <span aria-hidden="true">*</span></span>
+            </label>
+            <p class="error" id="privacy-error"></p>
+          </div>
+          <button type="submit">Create account</button>
+        </fieldset>
+        <p class="result" role="status"></p>
+      </form>
+      <nav aria-label="Related pages">
+        <p>Already have an account? <a href="index.html">Sign in</a></p>
+        <a class="privacy-link" href="privacy.html">Privacy note</a>
+      </nav>
+    </section>
+  </main>
+  <footer>Rahul Pandey Workspace</footer>
+</body>
+</html>
